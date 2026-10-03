@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html.dark {
+    color-scheme: dark;
+    --bg-primary: #0a0e14;
+    --bg-card: #141822;
+    --text-primary: #ffffff;
+    --text-secondary: #dfe2eb;
+    --border-color: rgba(165, 28, 48, 0.25);
+  }
+
+  html.light {
+    color-scheme: light;
+    --bg-primary: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #090d16;
+    --text-secondary: #2d3748;
+    --border-color: rgba(203, 213, 225, 0.9);
+  }
+
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #a51c30;
+    border-radius: 9999px;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-sans);
+}
+
+/* Daylight background treatments */
+.bg-light-blueprint {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(165, 28, 48, 0.08), transparent),
+    radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+  background-size: 100% 700px, 28px 28px;
+}
+
+.bg-dark-obsidian {
+  background-color: #0a0e14;
+}
